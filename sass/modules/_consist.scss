@@ -1,0 +1,85 @@
+.icon-cons1 {
+	@include retina-sprite(cons_icon1);
+	@include respond-to(medium-screen) {@include retina-sprite(cons-max_icon1);}
+}
+.icon-cons2 {
+	@include retina-sprite(cons_icon2);
+	@include respond-to(medium-screen) {@include retina-sprite(cons-max_icon2);}
+}
+.icon-cons3 {
+	@include retina-sprite(cons_icon3);
+	@include respond-to(medium-screen) {@include retina-sprite(cons-max_icon3);}
+}
+.icon-cons4 {
+	@include retina-sprite(cons_icon4);
+	@include respond-to(medium-screen) {@include retina-sprite(cons-max_icon4);}
+}
+.icon-cons5 {
+	@include retina-sprite(cons_icon5);
+	@include respond-to(medium-screen) {@include retina-sprite(cons-max_icon5);}
+}
+.icon-cons6 {
+	@include retina-sprite(cons_icon6);
+	@include respond-to(medium-screen) {@include retina-sprite(cons-max_icon6);}
+}
+
+
+.case-consist {
+	padding: 60px 0;
+	@include respond-to(medium-screen) {
+		padding: 0;
+	}
+	.item {
+		display: inline-block;
+		width: 33%;
+		margin-bottom: 20px;
+		vertical-align: top;
+		@include respond-to(medium-screen) {
+			width: 100%;
+			margin: 0;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.item-cnt {
+			padding-right: 60px;
+			@include respond-to(medium-screen) {
+				padding: 40px 60px;
+			}
+		}
+		.icon {
+			display: block;
+			width: 100px;
+			height: 100px;
+			margin-left: -20px;
+			@include respond-to(medium-screen) {
+				width: 200px;
+				height: 200px;
+				margin: -30px 10px 0 -40px;
+				float: left;
+			}
+		}
+		.info {
+			overflow: hidden;
+		}
+		.ttl {
+			margin-bottom: 15px;
+			font-size: 19px;
+			font-weight: bold;
+			line-height: 1.3;
+			@include respond-to(medium-screen) {
+				font-size: 24px;
+			}
+		}
+		.descript {
+			font-size: 16px;
+			line-height: 2;
+			@include respond-to(medium-screen) {
+				font-size: 20px;
+			}
+		}
+	}
+	.current {
+		@include respond-to(medium-screen) {
+			display: block;
+		}
+	}
+}

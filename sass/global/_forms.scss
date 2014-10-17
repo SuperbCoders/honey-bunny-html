@@ -1,0 +1,43 @@
+.input {
+	width: 100%;
+	padding: 16px 20px;
+	color: #999;
+	font-size: 16px;
+	@extend .arkadia;
+	border: 1px solid #999;
+	background: #fff;
+	box-sizing: border-box;
+	@include respond-to(medium-screen) {
+		font-size: 30px;
+	}
+}
+
+.forms {
+	.field {
+		margin-bottom: 40px;
+		position: relative;
+		textarea {
+			@extend .input;
+		}
+		input {
+			height: 49px;
+			vertical-align: middle;
+			@extend .input;
+			@include respond-to(medium-screen) {
+				height: 74px;
+			}
+		}
+	}
+	.field-valid {
+		&:after {
+			display: block;
+			content: '';
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			z-index: 10;
+		}
+	}
+}
