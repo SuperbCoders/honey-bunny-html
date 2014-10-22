@@ -19,39 +19,41 @@
 <body>
 	<article class="page">
 		<header class="page-header page-header-left covered darkstyle" style="background-image: url(images/products_bg.jpg);">
-			<div class="container globalwidth">
-				<div class="page-header-top">
-					<a class="btn-navbar navbar-toggle hidden visible-tablet" href="#">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<a class="logo logo-min" href="index.html"></a>
-					<nav class="navbar">
-						<div class="navbar-cnt">
-							<ul class="items">
-								<li class="item item1"><a href="#">О косметике</a></li>
-								<li class="item item2"><a href="products.html">Продукты</a></li>
-								<li class="item item3"><a href="company.html">О компании</a></li>
-								<li class="item item4"><a href="company_values.html">Наши ценности</a></li>
-								<li class="item item5 current"><a href="faq.html">Вопросы и ответы</a></li>
-								<li class="item item6 hidden-tablet"><a href="faq.html">Корзина<span class="count">1</span></a></li>
-							</ul>
-							<a class="close navbar-toggle hidden visible-tablet" href="#"></a>
-							<div class="follow-mob hidden visible-tablet">
-								<a href="#"><i class="icon icon-fb_grn"></i></a>
-								<a href="#"><i class="icon icon-vk_grn"></i></a>
-								<a href="#"><i class="icon icon-ig_grn"></i></a>
+			<div class="blackout">
+				<div class="container globalwidth">
+					<div class="page-header-top">
+						<a class="btn-navbar navbar-toggle hidden visible-tablet" href="#">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+						<a class="logo logo-min" href="index.html"></a>
+						<nav class="navbar">
+							<div class="navbar-cnt">
+								<ul class="items">
+									<li class="item item1"><a href="#">О косметике</a></li>
+									<li class="item item2"><a href="products.html">Продукты</a></li>
+									<li class="item item3"><a href="company.html">О компании</a></li>
+									<li class="item item4"><a href="company_values.html">Наши ценности</a></li>
+									<li class="item item5 current"><a href="faq.html">Вопросы и ответы</a></li>
+									<li class="item item6 hidden-tablet"><a href="faq.html">Корзина<span class="count">1</span></a></li>
+								</ul>
+								<a class="close navbar-toggle hidden visible-tablet" href="#"></a>
+								<div class="follow-mob hidden visible-tablet">
+									<a href="#"><i class="icon icon-fb_grn"></i></a>
+									<a href="#"><i class="icon icon-vk_grn"></i></a>
+									<a href="#"><i class="icon icon-ig_grn"></i></a>
+								</div>
 							</div>
+						</nav>
+						<a class="store hidden visible-tablet" href="cart.html">1</a>
+					</div>
+					<div class="page-header-bottom">
+						<div class="caption">
+							<div class="subtitle">Отвечаем на ваши вопросы</div>
+							<h1>Вопросы и ответы</h1>
+							<div class="dubtitle hidden-tablet">Про нашу классную косметику</div>
 						</div>
-					</nav>
-					<a class="store hidden visible-tablet" href="cart.html">1</a>
-				</div>
-				<div class="page-header-bottom">
-					<div class="caption">
-						<div class="subtitle">Отвечаем на ваши вопросы</div>
-						<h1>Вопросы и ответы</h1>
-						<div class="dubtitle hidden-tablet">Про нашу классную косметику</div>
 					</div>
 				</div>
 			</div>
@@ -76,6 +78,13 @@
 			<section class="case-faq">
 				<div class="container globalwidth">
 					<div class="wrapper">
+						<div class="search">
+							<form method="post" action="">
+								<i class="icon icon-search"></i>
+								<input type="text" placeholder="Вветите текст вопроса" />
+								<input class="hidden" type="submit" />
+							</form>
+						</div>
 						<ul class="items">
 							<li class="item">
 								<div class="capt"><a href="#">Где производится косметика?</a></div>
@@ -138,12 +147,12 @@
 								<div class="field"><textarea rows="" cols="" placeholder="Введите текст вопроса"></textarea></div>
 								<div class="field"><input type="text" placeholder="Как вас зовут?" /></div>
 								<div class="field">
-									<table width="100%">
-										<tr>
-											<td width="50%"><input type="text" placeholder="Ваша эл. почта" /></td>
-											<td width="50%"><input type="text" placeholder="Номер телефона для связи" /></td>
-										</tr>
-									</table>
+									<div class="table">
+										<div class="tr">
+											<div class="td td1"><input type="text" placeholder="Ваша эл. почта" /></div>
+											<div class="td td2"><input type="text" placeholder="Номер телефона для связи" /></div>
+										</div>
+									</div>
 								</div>
 								<div class="btn-wrap">
 									<button class="btn btn-grn" type="submit">Отправить</button>

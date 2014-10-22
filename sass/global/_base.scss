@@ -40,6 +40,10 @@ html, body {
 	background-size: cover;
 }
 
+.blackout {
+	background: rgba(#000,0.4);
+}
+
 .pagination {
 	height: 16px;
 	text-align: center;
@@ -62,5 +66,20 @@ html, body {
 		span {
 			display: none;
 		}
+	}
+}
+
+.table {
+	display: table;
+	width: 100%;
+	.tr {
+		display: table-row;
+	}
+	.th {
+		display: table-cell;
+	}
+	.td {
+		display: table-cell;
+		vertical-align: middle;
 	}
 }

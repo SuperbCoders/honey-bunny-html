@@ -1,11 +1,3 @@
-.page-header-center {
-	padding-top: 50px;
-}
-
-.page-header-left {
-	padding-top: 40px;
-}
-
 .page-header-short {
 	padding-bottom: 40px;
 	border-bottom: 1px solid #f0f0f0;
@@ -14,14 +6,9 @@
 	}
 }
 
-.page-header {
-	@include respond-to(medium-screen) {
-		padding: 0;
-	}
-}
-
 .page-header-top {
 	height: 90px;
+	padding-top: 40px;
 	position: relative;
 	@include respond-to(medium-screen) {
 		height: 142px;
@@ -36,7 +23,7 @@
 		.page-header-center & {
 			margin-left: -48px;
 			position: absolute;
-			top: 0;
+			top: 40px;
 			left: 50%;
 		}
 		.page-header-left & {
@@ -210,7 +197,7 @@
 		}
 	}
 	.caption {
-		padding: 0 0 0 250px;
+		padding: 0 125px;
 		letter-spacing: 0.1em;
 		@include respond-to(medium-screen) {
 			padding: 0 40px!important;
@@ -221,6 +208,7 @@
 			margin-bottom: 70px;
 			h1 {
 				font-size: 70px;
+				letter-spacing: 3px;
 			}
 			@include respond-to(medium-screen) {
 				margin: 0;

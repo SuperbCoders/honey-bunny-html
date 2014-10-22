@@ -56,6 +56,9 @@
 		@include respond-to(medium-screen) {
 			padding: 0;
 		}
+		.field {
+			margin-bottom: 40px;
+		}
 		.btn {
 			@include btn(200px, 50px);
 			font-size: 20px;
@@ -84,14 +87,6 @@
 		text-align: center;
 		@include respond-to(medium-screen) {
 			padding: 0;
-		}
-		.field {
-			margin-bottom: 15px;
-			td:last-child {
-				input {
-					margin-left: -1px;
-				}
-			}
 		}
 		.btn-wrap {
 			padding-top: 25px;
