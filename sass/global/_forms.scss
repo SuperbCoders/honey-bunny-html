@@ -18,7 +18,7 @@
 		position: relative;
 		textarea {
 			@extend .input;
-			min-height: 90px;
+			min-height: 106px;
 		}
 		input {
 			height: 50px;
@@ -53,16 +53,20 @@
 			}
 		}
 	}
-	.field-valid {
+	.field-required {
 		&:after {
 			display: block;
-			content: '';
-			width: 18px;
-			height: 18px;
+			content: '*';
 			position: absolute;
-			top: 12px;
-			right: 10px;
+			top: 18px;
+			right: 18px;
+			color: #ff3f3f;
+			font-size: 14px;
 			z-index: 10;
+			@include respond-to(medium-screen) {
+				top: 26px;
+				font-size: 30px;
+			}
 		}
 	}
 }

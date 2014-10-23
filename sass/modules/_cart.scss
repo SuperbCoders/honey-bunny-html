@@ -18,6 +18,9 @@
 		line-height: 1.2;
 		text-align: center;
 		background: #97e9bd;
+		@include respond-to(medium-screen) {
+			font-size: 30px;
+		}
 		b {
 			@extend .circe;
 		}
