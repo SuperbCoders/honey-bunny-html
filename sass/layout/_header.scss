@@ -67,6 +67,10 @@
 			line-height: 90px;
 			overflow: hidden;
 			.page-header-center & {
+				margin-right: -70px;
+				@include respond-to(middle-screen) {
+					margin-right: 0;
+				}
 				.item3 {
 					padding-right: 96px;
 					margin-right: 40px;

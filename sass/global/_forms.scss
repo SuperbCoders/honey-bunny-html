@@ -7,6 +7,8 @@
 	border: 1px solid #999;
 	background: #fff;
 	box-sizing: border-box;
+	box-shadow: none;
+	border-radius: 0;
 	&:focus {
 		@include respond-to(large-screen) {
 			border-color: #666;
