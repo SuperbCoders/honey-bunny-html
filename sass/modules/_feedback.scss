@@ -1,0 +1,56 @@
+.webui-popover-title {
+	display: none;
+}
+.webui-popover-content {
+	padding: 30px;
+	padding-top: 0;
+	margin-top: 30px;
+	position: relative;
+	.item {
+		font-size: 14px;
+		line-height: 18px;
+		border-bottom: 2px solid rgb(216,216,216);
+		padding-bottom: 25px;
+		margin-bottom: 40px;
+		&:last-of-type {
+			border-bottom: none;
+			margin-bottom: 0;
+		}
+		.rates {
+			margin-bottom: 15px;
+			color: #1a1a1a;
+			font-weight: bold;
+			.rates-text {
+				cursor: pointer;
+			}
+			.stars-cnt {
+				display: inline-block;
+				vertical-align: text-bottom;
+				margin-right: 8px;
+			}
+			.star {
+				@include retina_sprite(star);
+			}
+			.halfstar {
+				@include retina_sprite(half-star);
+			}
+			.star, .halfstar {
+				display: inline-block;
+			}
+		}
+		.person {
+			margin-top: 15px;
+			.avatar {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				float: left;
+				margin-right: 10px;
+			}
+			.name {
+				color: gray;
+				line-height: 40px;
+			}
+		}
+	}
+}
