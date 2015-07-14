@@ -8,9 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Honey-Bunny</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="css/jquery.webui-popover.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery.rateyo.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <!--[if lt IE 9]>
 		<script type="text/javascript" src="js/vendor/html5shiv.js"></script>
@@ -20,6 +19,52 @@
 </head>
 
 <body class="item-feedback" data-item="1">
+
+    <!--  Всплывающие окна  -->
+
+    <!--  item feedback done  -->
+    <div class="popup mfp-hide" id="popupDone">
+        <div class="wrapper">
+            <p class="title">Спасибо за ваш отзыв! Мы проверим его и в ближайшее время опубликуем на сайте.</p>
+            <div class="small">А пока вы можете посмотреть наши красивые фотографии в инстаграме</div>
+            <a href="#" class="btn">Инстаграм НВ</a>
+        </div>
+    </div>
+
+    <!--  item feedback pop  -->
+    <div class="popup mfp-hide" id="popupPop">
+        <div class="wrapper">
+            <div class="step1">
+                <p class="title">Написать отзыв</p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <div id="rating"></div>
+                <a href="#" class="btn btn-black">Написать</a>
+            </div>
+            <div class="step2">
+                <p class="title">Представьтесь
+                    <br> пожалуйста</p>
+                <div class="social">
+                    <a href="#" class="btn btn-fb">Через фейсбук</a>
+                    <a href="#" class="btn btn-vk">Через Вконтакте</a>
+                    <a href="#" class="btn btn-mm">Через МойМир</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  item feedback pop steal  -->
+    <div class="popup mfp-hide" id="popupSteal">
+        <div class="wrapper">
+            <p class="title">Приятно познакомиться,<br>
+                <span class="username">Ярослав</span>!</p>
+            <img src="http://placehold.it/100?text=Yaroslav" alt="" class="avatar">
+            <div class="text-gray">Перенесите фотографию</div>
+            <div class="text-green">или замените вручную</div>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <a href="#" class="btn btn-black">Отправить отзыв</a>
+        </div>
+    </div>
 
     <header class="percentage clearfix">
         <div class="col">
@@ -42,9 +87,17 @@
             <div class="globalwidth clearfix">
                 <div class="left">
                     Отзывы
+                    <br>
+                    <a href="#popupDone" class="open-feedback-done">item feedback done</a>
+                    <br>
+                    <a href="#popupPop" class="open-feedback-done">item feedback pop</a>
+                    <br>
+                    <a href="#popupSteal" class="open-feedback-done">item feedback steal</a>
+                    <br>
                 </div>
                 <div class="right">
-                   <p><span class="btn btn-grn" id="compose">Написать отзыв</span></p>
+                    <p><span class="btn btn-grn" id="compose">Написать отзыв</span>
+                    </p>
                     <div id="feedbacksContainer">
                         <!-- Сюда будут загружены отзывы.
                          Не забываем указыва
@@ -68,5 +121,6 @@
 
     </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script src="js/vendor/jquery.rateyo.min.js"></script>
 </body>

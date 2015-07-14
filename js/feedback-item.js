@@ -29,4 +29,36 @@ window.jQuery(function ($) {
         feedbacksContainer.find('.item').show();
         $(this).hide();
     });
+
+    // Открываем popup'ы
+    $('.open-feedback-done').magnificPopup({
+        type: 'inline',
+        midClick: true
+    });
+    
+    // Item Feedback Pop
+
+    // RateYo
+    $("#rating").rateYo({
+        rating: 0,
+        fullStar: true,
+        starWidth: "32px",
+        spacing: "10px",
+        onSet: function (rating, rateYoInstance) {
+            log("Rating is set to: " + rating);
+        }
+    });
+    // Нажатие на кнопку
+    $('#popupPop .btn').click(function(){
+        $('#popupPop').find('.step1').hide();
+        $('#popupPop').find('.step2').show();
+    });
+
+    // Масштабирует (k) svg-иконку звездочки, чтобы можно было подогнать под плагин RateYo
+//    function getPoints(k) {
+//        var points = '8 12 3.29771798 14.472136 4.19577393 9.23606798 0.39154787 5.52786405 5.64885899 4.76393202 8 0 10.351141 4.76393202 15.6084521 5.52786405 11.8042261 9.23606798 12.702282 14.472136'.split(' ');
+//        return points.map(function (p) {
+//            return p * k;
+//        }).join(' ');
+//    }
 });
