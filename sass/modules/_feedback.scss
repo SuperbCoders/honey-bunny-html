@@ -1,56 +1,193 @@
+// Для index.html
 .webui-popover-title {
-	display: none;
+    display: none;
 }
+
 .webui-popover-content {
-	padding: 30px;
-	padding-top: 0;
-	margin-top: 30px;
-	position: relative;
-	.item {
-		font-size: 14px;
-		line-height: 18px;
-		border-bottom: 2px solid rgb(216,216,216);
-		padding-bottom: 25px;
-		margin-bottom: 40px;
-		&:last-of-type {
-			border-bottom: none;
-			margin-bottom: 0;
-		}
-		.rates {
-			margin-bottom: 15px;
-			color: #1a1a1a;
-			font-weight: bold;
-			.rates-text {
-				cursor: pointer;
-			}
-			.stars-cnt {
-				display: inline-block;
-				vertical-align: text-bottom;
-				margin-right: 8px;
-			}
-			.star {
-				@include retina_sprite(star);
-			}
-			.halfstar {
-				@include retina_sprite(half-star);
-			}
-			.star, .halfstar {
-				display: inline-block;
-			}
-		}
-		.person {
-			margin-top: 15px;
-			.avatar {
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				float: left;
-				margin-right: 10px;
-			}
-			.name {
-				color: gray;
-				line-height: 40px;
-			}
-		}
-	}
+    padding: 30px;
+    padding-top: 0;
+    margin-top: 30px;
+    position: relative;
+}
+
+// Для index.html и item_feedback.html
+.webui-popover-content,
+.item-feedback .sec-feedback {
+    .item {
+        font-size: 14px;
+        line-height: 18px;
+        border-bottom: 2px solid rgb(216, 216, 216);
+        padding-bottom: 25px;
+        margin-bottom: 40px;
+        &:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .rates {
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            font-weight: bold;
+            .rates-text {
+                cursor: pointer;
+            }
+            .stars-cnt {
+                display: inline-block;
+                vertical-align: text-bottom;
+                margin-right: 8px;
+            }
+            .star {
+                @include retina_sprite(star);
+            }
+            .halfstar {
+                @include retina_sprite(half-star);
+            }
+            .star,
+            .halfstar {
+                display: inline-block;
+            }
+        }
+        .person {
+            margin-top: 15px;
+            .avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                float: left;
+                margin-right: 10px;
+            }
+            .name {
+                color: gray;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+// Для item_feedback.html
+.item-feedback .sec-feedback {
+    .item {
+        margin-bottom: 10px;
+        border-bottom: none;
+        display: none;
+        // Покажем только три первые отзыва
+        // Остальные покажет кнопка "Еще отзывы"
+        &:first-child, &:nth-child(2), &:nth-child(3) {
+            display: block;
+        }
+    }
+}
+
+body.item-feedback {
+    background: #f6f6f6;
+    .percentage {
+        .col {
+            height: 325px;
+            float: left;
+            background-color: #5ed193;
+            width: 25%;
+            box-sizing: border-box;
+            &:first-child {
+                background-color: #d9f000;
+                width: 65%;
+            }
+            &:last-child {
+                background-color: #8d92d2;
+                width: 10%;
+            }
+            padding-top: 75px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            .number {
+                font-size: 60px;
+            }
+            .text {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            @media (max-width: 1030px) {
+                .number {
+                    font-size: 40px;
+                }
+                .text {
+                    font-size: 16px;
+                }
+            }
+            @media (max-width: 760px) {
+                .number {
+                    font-size: 30px;
+                }
+                .text {
+                    font-size: 14px;
+                }
+                height: 200px;
+            }
+            @media (max-width: 600px) {
+                float: none;
+                width: 100% !important;
+                padding: 5px 40px;
+                height: auto;
+                text-align: left;
+                div {
+                    display: inline-block;
+                }
+                .number {
+                    width: 80px;
+                }
+            }
+        }
+    }
+    .main {
+        margin-top: 50px;
+    }
+    section .left {
+        font-size: 20px;
+        font-weight: bold;
+        width: 25%;
+        float: left;
+        padding-bottom: 20px;
+    }
+    section .right {
+        width: 75%;
+        float: left;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    @media (max-width: 600px) {
+        section .left, section .right {
+            width: 100%;
+            float: none;
+        }
+    }
+    .sec-feedback .globalwidth,
+    .sec-ingredients .globalwidth {
+        padding: 40px 10px;
+    }
+    .sec-feedback {
+        background: #f6f6f6;
+    }
+    .sec-ingredients {
+        background: #fff;
+    }
+    #compose {
+        height: 64px;
+        width: 100%;
+        max-width: 450px;
+        line-height: 64px;
+        border-radius: 33px;
+        font-size: 20px;
+        margin-bottom: 40px;
+        display: inline-block;
+    }
+    #btnMore {
+        // Скроем кнопку
+        // Отобразим её скриптом, если будет более 3-х отзывов
+        display: none;
+        box-sizing: border-box;
+        padding: 15px 50px;
+        border: 1px solid #979797;
+        border-radius: 100px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
 }
