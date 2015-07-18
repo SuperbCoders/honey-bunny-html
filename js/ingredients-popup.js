@@ -2,7 +2,8 @@ window.jQuery(function ($) {
 	'use strict';
 	$('.ingredients-popup').webuiPopover({
 		placement: 'top',
-		trigger: 'hover'
+		trigger: 'hover',
+		width: 380
 	});
 
 	// Переключение краткого / подробного описания товара
