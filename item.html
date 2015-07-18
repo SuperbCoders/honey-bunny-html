@@ -1,552 +1,781 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="utf-8" />
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<meta name="viewport" content="width=device-width; initial-scale=1.0">
-	<title>Honey-Bunny</title>
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-	<link rel="stylesheet" href="css/style.css" />
-	<!--[if lt IE 9]>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey-Bunny</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/jquery.webui-popover.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <!--[if lt IE 9]>
 		<script type="text/javascript" src="js/vendor/html5shiv.js"></script>
-	<![endif]-->
-	<script type="text/javascript" src="js/vendor/jquery.js"></script>
-	<script type="text/javascript" src="js/vendor/jquery.migrate.min.js"></script>
-	<script type="text/javascript" src="js/vendor/jquery.placeholder.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-</head>
-<body>
-	<article class="page">
-		<header class="page-header page-header-left page-header-short">
-			<div class="container globalwidth">
-				<div class="page-header-top">
-					<a class="btn-navbar navbar-toggle hidden visible-tablet" href="#">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<a class="logo logo-min" href="index.html"></a>
-					<nav class="navbar">
-						<div class="navbar-cnt">
-							<ul class="items">
-								<li class="item item1"><a href="#">О косметике</a></li>
-								<li class="item item2"><a href="products.html">Продукты</a></li>
-								<li class="item item3"><a href="company.html">О компании</a></li>
-								<li class="item item4"><a href="company_values.html">Наши ценности</a></li>
-								<li class="item item5"><a href="faq.html">Вопросы и ответы</a></li>
-								<li class="item item6 hidden-tablet"><a href="cart.html">Корзина<span class="count">1</span></a></li>
-							</ul>
-							<a class="close navbar-toggle hidden visible-tablet" href="#"></a>
-							<div class="follow-mob hidden visible-tablet">
-								<a href="#"><i class="icon icon-fb_grn"></i></a>
-								<a href="#"><i class="icon icon-vk_grn"></i></a>
-								<a href="#"><i class="icon icon-ig_grn"></i></a>
-							</div>
-						</div>
-					</nav>
-					<a class="store hidden visible-tablet" href="cart.html">1</a>
-				</div>
-			</div>
-		</header>
-		<section class="page-body">
-			<a class="back hidden visible-tablet" href="#">К продуктам</a>
-			<section class="case-product">
-				<div class="container globalwidth">
-					<div class="wrapper">
-						<figure><a href="item.html"><img width="360" height="760" src="images/item0.jpg" alt="" /></a></figure>
-						<div class="info">
-							<div class="descript hidden-tablet">Не утяжеляет волосы и придает блеск</div>
-							<div class="ttl">Витаминный шампунь для нормальных волос</div>
-							<div class="size">— 250 мл</div>
-							<div class="text hidden-tablet">
-								<p>Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам здоровый блеск и ухоженный вид в течение длительного времени.</p>
-							</div>
-							<span class="price">2 500 руб.</span>
-							<a class="btn btn-orn" href="#">Купить</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="separate">
-				<div class="container globalwidth">
-					<div class="line"></div>
-				</div>
-			</div>
-			<section class="case-article">
-				<div class="container globalwidth">
-					<div class="wrapper cols">
-						<div class="column1">
-							<h2>Описание шампуня</h2>
-						</div>
-						<div class="column2">
-							<div class="text">
-								<p>Изготовлено на основе масла семян марокканского дерева Арганы (ARGANIA SPINOSA) – редкого и ценного продукта, промысел которого расположен в юго-западной части Марокко. Благодаря уникальным свойствам масла, любые, даже ломкие и хрупкие волосы получают все необходимые ингредиенты для нормального роста. Волосы восстанавливаются естественным образом.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="case-promo covered hidden-tablet" style="background-image: url(images/promo_bg1.jpg);">
-				<div class="container globalwidth">
-					<div class="wrapper">
-						<h2>Хорошо<br /> пенится</h2>
-						<div class="text">
-							<p>Легко и хорошо пенится, не требует большого количества шампуня, за счет этого экономнее расходуется флакон</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="case-promo darkstyle covered hidden-tablet" style="background-image: url(images/promo_bg2.jpg);">
-				<div class="container globalwidth">
-					<div class="wrapper">
-						<h2>Легко смывается</h2>
-						<div class="text">
-							<p>Не содержит маслянистых вещевств, хорошо вымывается, не оставляет жирный след на волосах</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="case-promo darkstyle covered hidden-tablet" style="background-image: url(images/promo_bg3.jpg);">
-				<div class="container globalwidth">
-					<div class="wrapper">
-						<h2>Вкусно пахнет</h2>
-						<div class="text">
-							<p>Не содержит маслянистых вещевств, хорошо вымывается, не оставляет жирный след</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="case-consist">
-				<div class="container globalwidth">
-					<h2 class="center">Активные компоненты</h2>
-					<ul class="items">
-						<li class="item">
-							<div class="item-cnt">
-								<i class="icon"><img src="images/cons-max_icon1.png" alt="" /></i>
-								<div class="info">
-									<div class="ttl">Витамин А</div>
-									<div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам</div>
-								</div>
-							</div>
-						</li><li class="item">
-							<div class="item-cnt">
-								<i class="icon"><img src="images/cons-max_icon2.png" alt="" /></i>
-								<div class="info">
-									<div class="ttl">Витамин B</div>
-									<div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам здоровый блеск и ухоженный вид в течение длительного времени.</div>
-								</div>
-							</div>
-						</li><li class="item">
-							<div class="item-cnt">
-								<i class="icon"><img src="images/cons-max_icon3.png" alt="" /></i>
-								<div class="info">
-									<div class="ttl">Витамин C</div>
-									<div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом</div>
-								</div>
-							</div>
-						</li><li class="item">
-							<div class="item-cnt">
-								<i class="icon"><img src="images/cons-max_icon4.png" alt="" /></i>
-								<div class="info">
-									<div class="ttl">Витамин F</div>
-									<div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам</div>
-								</div>
-							</div>
-						</li><li class="item">
-							<div class="item-cnt">
-								<i class="icon"><img src="images/cons-max_icon5.png" alt="" /></i>
-								<div class="info">
-									<div class="ttl">Витамин H</div>
-									<div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые</div>
-								</div>
-							</div>
-						</li><li class="item">
-							<div class="item-cnt">
-								<i class="icon"><img src="images/cons-max_icon6.png" alt="" /></i>
-								<div class="info">
-									<div class="ttl">Экстракт<br /> семян каштана</div>
-									<div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам здоровый блеск и ухоженный вид в течение длительного времени.</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="case-tile hidden-tablet">
-				<div class="container">
-					<h2 class="center">Что делает продукт</h2>
-					<ul class="cols">
-						<li class="column" style="width: 25%; background: #d9ee22;">
-							<div class="prs">15%</div>
-							<div class="ttl">Защищает</div>
-						</li>
-						<li class="column darkstyle" style="width: 50%; background: #64d095;">
-							<div class="prs">40%</div>
-							<div class="ttl">Очищает</div>
-						</li>
-						<li class="column darkstyle" style="width: 25%; background: #8d93d0;">
-							<div class="prs">20%</div>
-							<div class="ttl">Увлажняет</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="case-article">
-				<div class="container globalwidth">
-					<div class="wrapper cols">
-						<div class="column1">
-							<h2>Состав</h2>
-						</div>
-						<div class="column2">
-							<div class="text small">
-								<p>Aqua, Sodium Laureth Sulfate, Decyl Glucoside, Cocamidopropyl Betaine, Sodium Chloride, PEG-7 Glyceryl Cocoate, Glucose, Sorbitol, Sodium Glutamate, Urea, Sodium PCA, Glycine, Lactic Acid, Hydrolyzed Wheat Protein, Panthenol, Inulin, Butylene Glycol, Malic Acid, Actinidia Chinensis (Kiwi) Fruit Juice, Citrus Aurantium Dulcis (Orange) Juice, Citrus Paradisi (Grapefruit) Juice, Pyrus Malus (Apple) Juice, Trideceth-9, Prunus Amygdalus Dulcis (Sweet Almond) Seed Extract, Parfum, Disodium EDTA, Methylchloroisothiazolinone, Methylisothiazolinone.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="separate">
-				<div class="container globalwidth">
-					<div class="line"></div>
-				</div>
-			</div>
-			<section class="case-comments">
-				<div class="container globalwidth">
-					<div class="case-capt center">
-						<h2>Что говорят люди</h2>
-						<a class="btn btn-grn-cut popup-with-form" href="#popup-comment">Написать отзыв</a>
-					</div>
-					<div class="case-cnt">
-						<ul class="items">
-							<li class="item">
-								<div class="preview">
-									<figure><img width="122" height="122" src="images/author1.jpg" alt="" /></figure>
-									<div class="author hidden visible-phone">
-										<p class="name">Виктория Шелл</p>
-										<p class="post">Домохозяйка</p>
-									</div>
-								</div>
-								<div class="rate hidden-phone">
-									<ul class="stars">
-										<li class="star star-fill"></li>
-										<li class="star star-fill">2</li>
-										<li class="star"></li>
-										<li class="star"></li>
-										<li class="star"></li>
-									</ul>
-									<div class="value">Оценка</div>
-								</div>
-								<div class="info">
-									<div class="descript">
-										<p>Довольно легкая консистенция, доступная цена, легко распределяется на коже, маскирует небольшие недостатки, матирует, не забивает поры, подстраивается под тон кожи, придаёт здоровое сияние.</p>
-									</div>
-									<div class="author hidden-phone">
-										<p class="name">Виктория Шелл</p>
-										<p class="post">Домохозяйка</p>
-									</div>
-								</div>
-								<div class="chart hidden visible-phone">
-									<table>
-										<tr>
-											<td><div class="ttl">Эффективность</div></td>
-											<td><div class="detect"><div class="pct" style="width: 100%;"></div></div></td>
-										</tr>
-										<tr>
-											<td><div class="ttl">Расход</div></td>
-											<td><div class="detect"><div class="pct" style="width: 70%;"></div></div></td>
-										</tr>
-										<tr>
-											<td><div class="ttl">Запах</div></td>
-											<td><div class="detect"><div class="pct" style="width: 100%;"></div></div></td>
-										</tr>
-									</table>
-								</div>
-							</li>
-							<li class="item hidden-phone">
-								<div class="preview">
-									<figure><img width="122" height="122" src="images/author2.jpg" alt="" /></figure>
-									<div class="author hidden visible-phone">
-										<p class="name">Виктория Шелл</p>
-										<p class="post">Домохозяйка</p>
-									</div>
-								</div>
-								<div class="rate hidden-phone">
-									<ul class="stars">
-										<li class="star star-fill"></li>
-										<li class="star star-fill"></li>
-										<li class="star star-fill"></li>
-										<li class="star star-fill">4</li>
-										<li class="star"></li>
-									</ul>
-									<div class="value">Оценка</div>
-								</div>
-								<div class="info">
-									<div class="descript">
-										<p>Довольно легкая консистенция, доступная цена, легко распределяется на коже, маскирует небольшие недостатки, матирует, не забивает поры, подстраивается под тон кожи, придаёт здоровое сияние, увлажняет кожу. Довольно легкая консистенция, доступная цена, легко распределяется на коже, маскирует небольшие недостатки, матирует, не забивает поры, подстраивается под тон кожи, придаёт здоровое сияние, увлажняет кожу.</p>
-									</div>
-									<div class="author hidden-phone">
-										<p class="name">Виктория Шелл</p>
-										<p class="post">Домохозяйка</p>
-									</div>
-								</div>
-								<div class="chart hidden visible-phone">
-									<table>
-										<tr>
-											<td><div class="ttl">Эффективность</div></td>
-											<td><div class="detect"><div class="pct" style="width: 100%;"></div></div></td>
-										</tr>
-										<tr>
-											<td><div class="ttl">Расход</div></td>
-											<td><div class="detect"><div class="pct" style="width: 70%;"></div></div></td>
-										</tr>
-										<tr>
-											<td><div class="ttl">Запах</div></td>
-											<td><div class="detect"><div class="pct" style="width: 100%;"></div></div></td>
-										</tr>
-									</table>
-								</div>
-							</li>
-							<li class="item hidden-phone">
-								<div class="preview">
-									<figure><img width="122" height="122" src="images/author3.jpg" alt="" /></figure>
-									<div class="author hidden visible-phone">
-										<p class="name">Виктория Шелл</p>
-										<p class="post">Домохозяйка</p>
-									</div>
-								</div>
-								<div class="rate hidden-phone">
-									<ul class="stars">
-										<li class="star star-fill"></li>
-										<li class="star star-fill"></li>
-										<li class="star star-fill"></li>
-										<li class="star star-fill"></li>
-										<li class="star star-fill">5</li>
-									</ul>
-									<div class="value">Оценка</div>
-								</div>
-								<div class="info">
-									<div class="descript">
-										<p>Довольно легкая консистенция, доступная цена, легко распределяется на коже, маскирует небольшие недостатки, матирует, не забивает поры, подстраивается под тон кожи, придаёт здоровое сияние, увлажняет кожу.</p>
-									</div>
-									<div class="author hidden-phone">
-										<p class="name">Ярослав Самойлов</p>
-										<p class="post">Инвестор</p>
-									</div>
-								</div>
-								<div class="chart hidden visible-phone">
-									<table>
-										<tr>
-											<td><div class="ttl">Эффективность</div></td>
-											<td><div class="detect"><div class="pct" style="width: 100%;"></div></div></td>
-										</tr>
-										<tr>
-											<td><div class="ttl">Расход</div></td>
-											<td><div class="detect"><div class="pct" style="width: 70%;"></div></div></td>
-										</tr>
-										<tr>
-											<td><div class="ttl">Запах</div></td>
-											<td><div class="detect"><div class="pct" style="width: 100%;"></div></div></td>
-										</tr>
-									</table>
-								</div>
-							</li>
-						</ul>
-						<div class="btn-wrap">
-							<a class="btn btn-more btn-gry-cut hidden-phone" href="#">Показать еще 3 отзыва</a>
-							<a class="btn-refresh hidden visible-phone" href="#"></a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="case-social-min hidden-tablet">
-				<div class="container globalwidth">
-					<div class="likebox hidden-tablet">
-						<img width="275" height="75" src="images/likebox_min.jpg" alt="" />
-					</div>
-					<div class="follow">
-						<ul class="items">
-							<li class="item">
-								<a href="#"><i class="icon icon-ig_gry"></i></a></li><li class="item">
-								<a href="#"><i class="icon icon-fb_gry"></i></a></li><li class="item">
-								<a href="#"><i class="icon icon-vk_gry"></i></a></li><li class="item">
-								<a href="#"><i class="icon icon-tw_gry"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section class="case-products">
-				<div class="container">
-					<ul class="items">
-						<li class="item">
-							<div class="item-cnt">
-								<figure><a href="item.html"><img width="200" height="420" src="images/item1.jpg" alt="" /></a></figure>
-								<div class="info">
-									<div class="descript hidden-phone">Не утяжеляет волосы и придает блеск</div>
-									<div class="ttl"><a href="item.html">Витаминный шампунь для нормальных волос</a></div>
-									<div class="size hidden-phone">— 250 мл</div>
-									<div class="price">2 500 руб.</div>
-									<div class="btn-wrap hidden visible-tablet">
-										<a class="btn btn-orn" href="#">Купить</a>
-										<p class="more"><a href="item.html">Подробнее <span class="hidden-tablet">о продукте</span></a></p>
-									</div>
-								</div>
-							</div>
-						</li><li class="item">
-							<div class="item-cnt">
-								<figure><a href="item.html"><img width="200" height="420" src="images/item2.jpg" alt="" /></a></figure>
-								<div class="info">
-									<div class="descript hidden-phone">Не утяжеляет волосы и придает блеск</div>
-									<div class="ttl"><a href="item.html">Цитрусовый шампунь для жирных волос</a></div>
-									<div class="size hidden-phone">— 250 мл</div>
-									<div class="price">1 350 руб.</div>
-									<div class="btn-wrap hidden visible-tablet">
-										<a class="btn btn-orn" href="#">Купить</a>
-										<p class="more"><a href="item.html">Подробнее <span class="hidden-tablet">о продукте</span></a></p>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="case-shops">
-				<div class="container globalwidth">
-					<div class="case-capt center">
-						<h2>Наши магазины в <a href="#">Москве</a></h2>
-					</div>
-					<div class="case-cnt">
-						<div class="list">
-							<table>
-								<tr>
-									<td class="numb">1</td>
-									<td class="logo hidden-phone"><img width="65" height="65" src="images/shop1.jpg" alt="" /></td>
-									<td class="info">
-										<p class="ttl">Магазин косметикии аксессуаров</p>
-										<p class="addr">Подсосенский пер. 21/5</p>
-										<p class="map"><a class="link" href="#">На карте</a></p>
-									</td>
-									<td class="contact hidden-tablet">
-										<p class="tel">Тел: 8 (927) 026 10 27</p>
-										<p class="mail"><a class="link" href="#">hello@myhoneybunny.ru</a></p>
-									</td>
-									<td class="note">
-										<div class="status">
-											<i class="icon"><img src="img/label-verify.png" alt="" /></i>
-											<p class="ttl hidden-phone">Официальный магазин H•B</p>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="numb">2</td>
-									<td class="logo hidden-phone"><img width="65" height="65" src="images/shop2.jpg" alt="" /></td>
-									<td class="info">
-										<p class="ttl">Косметика и салон красоты BB’s</p>
-										<p class="addr">Старопименовский пер. 6</p>
-										<p class="map"><a class="link" href="#">На карте</a></p>
-									</td>
-									<td class="contact hidden-tablet">
-										<p class="tel">Тел: 8 (495) 699-20-51</p>
-										<p class="mail"><a class="link" href="#">hello@bling-blings.ru</a></p>
-									</td>
-									<td class="note">
-										<div class="status">
-											<i class="icon"><img src="img/label-verify.png" alt="" /></i>
-											<p class="ttl hidden-phone">Официальный магазин H•B</p>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="numb">3</td>
-									<td class="logo hidden-phone"><img width="65" height="65" src="images/shop3.jpg" alt="" /></td>
-									<td class="info">
-										<p class="ttl">Web Cosmetics</p>
-										<p class="addr">Проспект Колосова 201</p>
-										<p class="map"><a class="link" href="#">На карте</a></p>
-									</td>
-									<td class="contact hidden-tablet">
-										<p class="tel">Тел: 8 (927) 026 10 27</p>
-										<p class="mail"><a class="link" href="#">hello@something.ru</a></p>
-									</td>
-									<td class="note">
-										<div class="status">
-											<i class="icon"><img src="img/label-verify.png" alt="" /></i>
-											<p class="ttl hidden-phone">Официальный магазин H•B</p>
-										</div>
-									</td>
-								</tr>
-								<tr class="hidden-tablet">
-									<td class="numb">4</td>
-									<td class="logo hidden-phone"><img width="65" height="65" src="images/shop4.jpg" alt="" /></td>
-									<td class="info">
-										<p class="ttl">Lunifera</p>
-										<p class="addr">ул. Четвертый перекресток 20</p>
-										<p class="map"><a class="link" href="#">На карте</a></p>
-									</td>
-									<td class="contact hidden-tablet">
-										<p class="tel">Тел: 8 (927) 026 10 27</p>
-										<p class="mail"><a class="link" href="#">hello@lunifera.com</a></p>
-									</td>
-									<td class="note">
-										<div class="status">
-											<i class="icon"><img src="img/label-verify.png" alt="" /></i>
-											<p class="ttl hidden-phone">Официальный магазин H•B</p>
-										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div class="btn-wrap">
-							<a class="btn btn-more btn-gry-cut" href="#"><span class="hidden-tablet">Показать еще 10 магазинов</span><span class="hidden visible-tablet">Еще 3 магазина</span></a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="case-tile hidden-tablet">
-					<div class="container">
-						<ul class="cols">
-							<li class="column covered"><img src="images/tile_bg1.jpg" alt="" /></li>
-							<li class="column covered"><img src="images/tile_bg2.jpg" alt="" /></li>
-							<li class="column covered"><img src="images/tile_bg3.jpg" alt="" /></li>
-						</ul>
-					</div>
-				</section>
-			<section class="case-article hidden-tablet">
-				<div class="container globalwidth">
-					<div class="wrapper">
-						<div class="subtitle">История бренда</div>
-						<h2>Косметика HoneyBunny производится в России, под Москвой, мы сотрудничаем с частной лабораторией по разработке косметических средств В определенный момент к нам пришло понимание, что просто торговлей заниматься стало не интересно.</h2>
-					</div>
-				</div>
-			</section>
-			<section class="case-social hidden visible-tablet">
-				<div class="container globalwidth">
-					<div class="follow-mob center">
-						<a href="#"><i class="icon icon-fb_grn"></i></a>
-						<a href="#"><i class="icon icon-vk_grn"></i></a>
-						<a href="#"><i class="icon icon-ig_grn"></i></a>
-					</div>
-				</div>
-			</section>
-		</section>
-		<footer class="page-footer darkstyle">
-			<div class="container globalwidth">
-				<div class="contact">
-					<ul class="items">
-						<li class="item item1"><a href="#"><i class="icon icon-tel"></i></a></li><li class="item item2">
-						<a href="#"><i class="icon icon-mail"></i></a></li><li class="item item3 hidden-phone">
-						<a href="#"><i class="icon icon-ig"></i></a></li><li class="item item4 hidden-phone">
-						<a href="#"><i class="icon icon-fb"></i></a></li><li class="item item5 hidden-phone">
-						<a href="#"><i class="icon icon-vk"></i></a></li><li class="item item6 hidden-phone">
-						<a href="#"><i class="icon icon-tw"></i></a></li>
-					</ul>
-				</div>
-				<div class="logo-wrap">
-					<a class="logo" href="index.html"></a>
-				</div>
-				<div class="copyright">© 2014 Honey-Bunny</div>
-			</div>
-		</footer>
-	</article>
-</body>
-</html>
+       <![endif]-->
+       <script type="text/javascript" src="js/vendor/jquery.js"></script>
+       <script type="text/javascript" src="js/vendor/jquery.migrate.min.js"></script>
+       <script type="text/javascript" src="js/vendor/jquery.placeholder.min.js"></script>
+       <script type="text/javascript" src="js/vendor/jquery.magnific-popup.min.js"></script>
+       <script src="js/vendor/jquery.webui-popover.min.js"></script>
+       <script type="text/javascript" src="js/script.js"></script>
+       <script src="js/ingredients-popup.js"></script>
+   </head>
+
+   <body class="item">
+    <article class="page">
+        <header class="page-header page-header-left page-header-short">
+            <div class="container globalwidth">
+                <div class="page-header-top">
+                    <a class="btn-navbar navbar-toggle hidden visible-tablet" href="#">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="logo logo-min" href="index.html"></a>
+                    <nav class="navbar">
+                        <div class="navbar-cnt">
+                            <ul class="items">
+                                <li class="item item1"><a href="#">О косметике</a>
+                                </li>
+                                <li class="item item2"><a href="products.html">Продукты</a>
+                                </li>
+                                <li class="item item3"><a href="company.html">О компании</a>
+                                </li>
+                                <li class="item item4"><a href="company_values.html">Наши ценности</a>
+                                </li>
+                                <li class="item item5"><a href="faq.html">Вопросы и ответы</a>
+                                </li>
+                                <li class="item item6 hidden-tablet"><a href="cart.html">Корзина<span class="count">1</span></a>
+                                </li>
+                            </ul>
+                            <a class="close navbar-toggle hidden visible-tablet" href="#"></a>
+                            <div class="follow-mob hidden visible-tablet">
+                                <a href="#"><i class="icon icon-fb_grn"></i></a>
+                                <a href="#"><i class="icon icon-vk_grn"></i></a>
+                                <a href="#"><i class="icon icon-ig_grn"></i></a>
+                            </div>
+                        </div>
+                    </nav>
+                    <a class="store hidden visible-tablet" href="cart.html">1</a>
+                </div>
+            </div>
+        </header>
+        <section class="page-body">
+            <a class="back hidden visible-tablet" href="#">К продуктам</a>
+            <section class="case-product">
+                <div class="container globalwidth">
+                    <div class="wrapper">
+                        <figure>
+                            <a href="item.html"><img width="360" height="760" src="images/item0.jpg" alt="" />
+                            </a>
+                        </figure>
+                        <div class="info">
+                            <div class="descript hidden-tablet">Не утяжеляет волосы и придает блеск</div>
+                            <div class="ttl">Витаминный шампунь для нормальных волос</div>
+                            <div class="size">— 250 мл</div>
+                            <div class="text hidden-tablet">
+                                <p>Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам здоровый блеск и ухоженный вид в течение длительного времени.</p>
+                            </div>
+                            <span class="price">2 500 руб.</span>
+                            <a class="btn btn-orn" href="#">Купить</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="separate">
+                <div class="container globalwidth">
+                    <div class="line"></div>
+                </div>
+            </div>
+            <section class="case-article">
+                <div class="container globalwidth">
+                    <div class="wrapper cols">
+                        <div class="column1">
+                            <h2>Описание шампуня</h2>
+                        </div>
+                        <div class="column2">
+                            <div class="text">
+                                <p>Изготовлено на основе масла семян марокканского дерева Арганы (ARGANIA SPINOSA) – редкого и ценного продукта, промысел которого расположен в юго-западной части Марокко. Благодаря уникальным свойствам масла, любые, даже ломкие и хрупкие волосы получают все необходимые ингредиенты для нормального роста. Волосы восстанавливаются естественным образом.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="case-promo covered hidden-tablet" style="background-image: url(images/promo_bg1.jpg);">
+                <div class="container globalwidth">
+                    <div class="wrapper">
+                        <h2>Хорошо<br /> пенится</h2>
+                        <div class="text">
+                            <p>Легко и хорошо пенится, не требует большого количества шампуня, за счет этого экономнее расходуется флакон</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="case-promo darkstyle covered hidden-tablet" style="background-image: url(images/promo_bg2.jpg);">
+                <div class="container globalwidth">
+                    <div class="wrapper">
+                        <h2>Легко смывается</h2>
+                        <div class="text">
+                            <p>Не содержит маслянистых вещевств, хорошо вымывается, не оставляет жирный след на волосах</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="case-promo darkstyle covered hidden-tablet" style="background-image: url(images/promo_bg3.jpg);">
+                <div class="container globalwidth">
+                    <div class="wrapper">
+                        <h2>Вкусно пахнет</h2>
+                        <div class="text">
+                            <p>Не содержит маслянистых вещевств, хорошо вымывается, не оставляет жирный след</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="case-consist">
+                <div class="container globalwidth">
+                    <h2 class="center">Активные компоненты</h2>
+                    <ul class="items">
+                        <li class="item">
+                            <div class="item-cnt">
+                                <i class="icon"><img src="images/cons-max_icon1.png" alt="" /></i>
+                                <div class="info">
+                                    <div class="ttl">Витамин А</div>
+                                    <div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-cnt">
+                                <i class="icon"><img src="images/cons-max_icon2.png" alt="" /></i>
+                                <div class="info">
+                                    <div class="ttl">Витамин B</div>
+                                    <div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам здоровый блеск и ухоженный вид в течение длительного времени.</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-cnt">
+                                <i class="icon"><img src="images/cons-max_icon3.png" alt="" /></i>
+                                <div class="info">
+                                    <div class="ttl">Витамин C</div>
+                                    <div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-cnt">
+                                <i class="icon"><img src="images/cons-max_icon4.png" alt="" /></i>
+                                <div class="info">
+                                    <div class="ttl">Витамин F</div>
+                                    <div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-cnt">
+                                <i class="icon"><img src="images/cons-max_icon5.png" alt="" /></i>
+                                <div class="info">
+                                    <div class="ttl">Витамин H</div>
+                                    <div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-cnt">
+                                <i class="icon"><img src="images/cons-max_icon6.png" alt="" /></i>
+                                <div class="info">
+                                    <div class="ttl">Экстракт
+                                        <br /> семян каштана</div>
+                                        <div class="descript">Продукт идеально подходит для тонких и светлоокрашенных волос. Имеет чуть более лёгкий состав и цвет, чем обычное масло Hair Treatment, при этом сохраняет все необходимые свойства. Придает волосам здоровый блеск и ухоженный вид в течение длительного времени.</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="case-tile hidden-tablet">
+                    <div class="container">
+                        <h2 class="center">Что делает продукт</h2>
+                        <ul class="cols">
+                            <li class="column" style="width: 25%; background: #d9ee22;">
+                                <div class="prs">15%</div>
+                                <div class="ttl">Защищает</div>
+                            </li>
+                            <li class="column darkstyle" style="width: 50%; background: #64d095;">
+                                <div class="prs">40%</div>
+                                <div class="ttl">Очищает</div>
+                            </li>
+                            <li class="column darkstyle" style="width: 25%; background: #8d93d0;">
+                                <div class="prs">20%</div>
+                                <div class="ttl">Увлажняет</div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="case-article ingredients">
+                    <div class="container globalwidth">
+                        <div class="wrapper cols">
+                            <div class="column1">
+                                <h2>Состав</h2>
+                                <div class="bi-button">
+                                    <div class="short current">Краткий</div>
+                                    <div class="full">Подробный</div>
+                                </div>
+                            </div>
+                            <div class="column2">
+                                <div class="text small short-descr">
+                                    <p>
+                                        <span 
+                                        class="ingredients-popup" 
+                                        data-content="
+                                        <section class='ingr-popup'>
+                                            <div class='icon-wrap'><div class='icon natural'></div></div>
+                                            <h1>Макадамия</h1>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ducimus rem modi</p>
+                                        </section>">
+                                        Aqua</span>,
+                                        <span 
+                                        class="ingredients-popup" 
+                                        data-content="
+                                        <section class='ingr-popup'>
+                                            <div class='icon-wrap'><div class='icon synthetic'></div></div>
+                                            <h1>Лауретсульфат натрия</h1>
+                                            <p>лаурилсульфат натрия и родственный ему лаурилсульфат аммония в концентрации 2 % вызывают раздражение кожи у подопытных животных и некоторых людей</p>
+                                        </section>">
+                                        Sodium Laureth Sulfate</span>, Decyl Glucoside, Cocamidopropyl Betaine, Sodium Chloride, PEG-7 Glyceryl Cocoate, Glucose, Sorbitol, Sodium Glutamate, Urea, Sodium PCA, Glycine, Lactic Acid, Hydrolyzed Wheat Protein, Panthenol, Inulin, Butylene Glycol, Malic Acid, Actinidia Chinensis (Kiwi) Fruit Juice, Citrus Aurantium Dulcis (Orange) Juice, Citrus Paradisi (Grapefruit) Juice, Pyrus Malus (Apple) Juice, Trideceth-9, Prunus Amygdalus Dulcis (Sweet Almond) Seed Extract, Parfum, Disodium EDTA, Methylchloroisothiazolinone, Methylisothiazolinone.
+                                    </p>
+                                </div>
+                                <div class="full-descr">
+                                    <table class="full-d">
+                                        <tr>
+                                            <td>Экстракт Макадамии</td>
+                                            <td><div class="icon natural"></div></td>
+                                            <td>Растение впервые было описано немецким ботаником
+                                                Фердинандом фон Мюллером, долгое время работавшим в
+                                                Австралии, который назвал его в честь своего коллеги
+                                                австралийского химика Джона Макадама (англ.)русск..
+                                                Долгое время орех называли по-разному: различным
+                                                племенам австралийских аборигенов он был известен как
+                                                муллимбимби, бумера, киндал-киндал.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Миндаль</td>
+                                            <td><div class="icon synthetic"></div></td>
+                                            <td>Растение впервые было описано немецким ботаником
+                                                Фердинандом фон Мюллером, долгое время работавшим в
+                                                Австралии, который назвал его в честь своего коллеги
+                                                австралийского химика Джона Макадама (англ.)русск..
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Экстракт Макадамии</td>
+                                            <td><div class="icon natural"></div></td>
+                                            <td>Растение впервые было описано немецким ботаником
+                                                Фердинандом фон Мюллером, долгое время работавшим в
+                                                Австралии, который назвал его в честь своего коллеги
+                                                австралийского химика Джона Макадама (англ.)русск..
+                                                Долгое время орех называли по-разному: различным
+                                                племенам австралийских аборигенов он был известен как
+                                                муллимбимби, бумера, киндал-киндал.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Миндаль</td>
+                                            <td><div class="icon synthetic"></div></td>
+                                            <td>Растение впервые было описано немецким ботаником
+                                                Фердинандом фон Мюллером, долгое время работавшим в
+                                                Австралии, который назвал его в честь своего коллеги
+                                                австралийского химика Джона Макадама (англ.)русск..
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Экстракт Макадамии</td>
+                                            <td><div class="icon natural"></div></td>
+                                            <td>Растение впервые было описано немецким ботаником
+                                                Фердинандом фон Мюллером, долгое время работавшим в
+                                                Австралии, который назвал его в честь своего коллеги
+                                                австралийского химика Джона Макадама (англ.)русск..
+                                                Долгое время орех называли по-разному: различным
+                                                племенам австралийских аборигенов он был известен как
+                                                муллимбимби, бумера, киндал-киндал.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Миндаль</td>
+                                            <td><div class="icon synthetic"></div></td>
+                                            <td>Растение впервые было описано немецким ботаником
+                                                Фердинандом фон Мюллером, долгое время работавшим в
+                                                Австралии, который назвал его в честь своего коллеги
+                                                австралийского химика Джона Макадама (англ.)русск..
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-article press-about-us">
+                    <div class="container globalwidth">
+                        <div class="wrapper cols">
+                            <div class="column1">
+                                <h2>Пресса о нас</h2>
+                            </div>
+                            <div class="column2">
+                                <img src="images/afisha2x.png" alt="Афиша" height="84px">
+                                <img src="images/village2x.png" alt="The Village" height="59px">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- <div class="separate">
+                    <div class="container globalwidth">
+                        <div class="line"></div>
+                    </div>
+                </div> -->
+                
+                <section class="case-comments">
+                    <div class="container globalwidth">
+                        <div class="case-capt center">
+                            <h2>Что говорят люди</h2>
+                            <a class="btn btn-grn-cut popup-with-form" href="#popup-comment">Написать отзыв</a>
+                        </div>
+                        <div class="case-cnt">
+                            <ul class="items">
+                                <li class="item">
+                                    <div class="preview">
+                                        <figure><img width="122" height="122" src="images/author1.jpg" alt="" />
+                                        </figure>
+                                        <div class="author hidden visible-phone">
+                                            <p class="name">Виктория Шелл</p>
+                                            <p class="post">Домохозяйка</p>
+                                        </div>
+                                    </div>
+                                    <div class="rate hidden-phone">
+                                        <ul class="stars">
+                                            <li class="star star-fill"></li>
+                                            <li class="star star-fill">2</li>
+                                            <li class="star"></li>
+                                            <li class="star"></li>
+                                            <li class="star"></li>
+                                        </ul>
+                                        <div class="value">Оценка</div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="descript">
+                                            <p>Довольно легкая консистенция, доступная цена, легко распределяется на коже, маскирует небольшие недостатки, матирует, не забивает поры, подстраивается под тон кожи, придаёт здоровое сияние.</p>
+                                        </div>
+                                        <div class="author hidden-phone">
+                                            <p class="name">Виктория Шелл</p>
+                                            <p class="post">Домохозяйка</p>
+                                        </div>
+                                    </div>
+                                    <div class="chart hidden visible-phone">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="ttl">Эффективность</div>
+                                                </td>
+                                                <td>
+                                                    <div class="detect">
+                                                        <div class="pct" style="width: 100%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ttl">Расход</div>
+                                                </td>
+                                                <td>
+                                                    <div class="detect">
+                                                        <div class="pct" style="width: 70%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ttl">Запах</div>
+                                                </td>
+                                                <td>
+                                                    <div class="detect">
+                                                        <div class="pct" style="width: 100%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li class="item hidden-phone">
+                                    <div class="preview">
+                                        <figure><img width="122" height="122" src="images/author2.jpg" alt="" />
+                                        </figure>
+                                        <div class="author hidden visible-phone">
+                                            <p class="name">Виктория Шелл</p>
+                                            <p class="post">Домохозяйка</p>
+                                        </div>
+                                    </div>
+                                    <div class="rate hidden-phone">
+                                        <ul class="stars">
+                                            <li class="star star-fill"></li>
+                                            <li class="star star-fill"></li>
+                                            <li class="star star-fill"></li>
+                                            <li class="star star-fill">4</li>
+                                            <li class="star"></li>
+                                        </ul>
+                                        <div class="value">Оценка</div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="descript">
+                                            <p>Довольно легкая консистенция, доступная цена, легко распределяется на коже, маскирует небольшие недостатки, матирует, не забивает поры, подстраивается под тон кожи, придаёт здоровое сияние, увлажняет кожу. Довольно легкая консистенция, доступная цена, легко распределяется на коже, маскирует небольшие недостатки, матирует, не забивает поры, подстраивается под тон кожи, придаёт здоровое сияние, увлажняет кожу.</p>
+                                        </div>
+                                        <div class="author hidden-phone">
+                                            <p class="name">Виктория Шелл</p>
+                                            <p class="post">Домохозяйка</p>
+                                        </div>
+                                    </div>
+                                    <div class="chart hidden visible-phone">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="ttl">Эффективность</div>
+                                                </td>
+                                                <td>
+                                                    <div class="detect">
+                                                        <div class="pct" style="width: 100%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ttl">Расход</div>
+                                                </td>
+                                                <td>
+                                                    <div class="detect">
+                                                        <div class="pct" style="width: 70%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ttl">Запах</div>
+                                                </td>
+                                                <td>
+                                                    <div class="detect">
+                                                        <div class="pct" style="width: 100%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li class="item hidden-phone">
+                                    <div class="preview">
+                                        <figure><img width="122" height="122" src="images/author3.jpg" alt="" />
+                                        </figure>
+                                        <div class="author hidden visible-phone">
+                                            <p class="name">Виктория Шелл</p>
+                                            <p class="post">Домохозяйка</p>
+                                        </div>
+                                    </div>
+                                    <div class="rate hidden-phone">
+                                        <ul class="stars">
+                                            <li class="star star-fill"></li>
+                                            <li class="star star-fill"></li>
+                                            <li class="star star-fill"></li>
+                                            <li class="star star-fill"></li>
+                                            <li class="star star-fill">5</li>
+                                        </ul>
+                                        <div class="value">Оценка</div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="descript">
+                                            <p>Довольно легкая консистенция, доступная цена, легко распределяется на коже, маскирует небольшие недостатки, матирует, не забивает поры, подстраивается под тон кожи, придаёт здоровое сияние, увлажняет кожу.</p>
+                                        </div>
+                                        <div class="author hidden-phone">
+                                            <p class="name">Ярослав Самойлов</p>
+                                            <p class="post">Инвестор</p>
+                                        </div>
+                                    </div>
+                                    <div class="chart hidden visible-phone">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="ttl">Эффективность</div>
+                                                </td>
+                                                <td>
+                                                    <div class="detect">
+                                                        <div class="pct" style="width: 100%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ttl">Расход</div>
+                                                </td>
+                                                <td>
+                                                    <div class="detect">
+                                                        <div class="pct" style="width: 70%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ttl">Запах</div>
+                                                </td>
+                                                <td>
+                                                    <div class="detect">
+                                                        <div class="pct" style="width: 100%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a class="btn btn-more btn-gry-cut hidden-phone" href="#">Показать еще 3 отзыва</a>
+                                <a class="btn-refresh hidden visible-phone" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="case-social-min hidden-tablet">
+                    <div class="container globalwidth">
+                        <div class="likebox hidden-tablet">
+                            <img width="275" height="75" src="images/likebox_min.jpg" alt="" />
+                        </div>
+                        <div class="follow">
+                            <ul class="items">
+                                <li class="item">
+                                    <a href="#"><i class="icon icon-ig_gry"></i></a>
+                                </li>
+                                <li class="item">
+                                    <a href="#"><i class="icon icon-fb_gry"></i></a>
+                                </li>
+                                <li class="item">
+                                    <a href="#"><i class="icon icon-vk_gry"></i></a>
+                                </li>
+                                <li class="item">
+                                    <a href="#"><i class="icon icon-tw_gry"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="case-products">
+                    <div class="container">
+                        <ul class="items">
+                            <li class="item">
+                                <div class="item-cnt">
+                                    <figure>
+                                        <a href="item.html"><img width="200" height="420" src="images/item1.jpg" alt="" />
+                                        </a>
+                                    </figure>
+                                    <div class="info">
+                                        <div class="descript hidden-phone">Не утяжеляет волосы и придает блеск</div>
+                                        <div class="ttl"><a href="item.html">Витаминный шампунь для нормальных волос</a>
+                                        </div>
+                                        <div class="size hidden-phone">— 250 мл</div>
+                                        <div class="price">2 500 руб.</div>
+                                        <div class="btn-wrap hidden visible-tablet">
+                                            <a class="btn btn-orn" href="#">Купить</a>
+                                            <p class="more"><a href="item.html">Подробнее <span class="hidden-tablet">о продукте</span></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="item-cnt">
+                                    <figure>
+                                        <a href="item.html"><img width="200" height="420" src="images/item2.jpg" alt="" />
+                                        </a>
+                                    </figure>
+                                    <div class="info">
+                                        <div class="descript hidden-phone">Не утяжеляет волосы и придает блеск</div>
+                                        <div class="ttl"><a href="item.html">Цитрусовый шампунь для жирных волос</a>
+                                        </div>
+                                        <div class="size hidden-phone">— 250 мл</div>
+                                        <div class="price">1 350 руб.</div>
+                                        <div class="btn-wrap hidden visible-tablet">
+                                            <a class="btn btn-orn" href="#">Купить</a>
+                                            <p class="more"><a href="item.html">Подробнее <span class="hidden-tablet">о продукте</span></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="case-shops">
+                    <div class="container globalwidth">
+                        <div class="case-capt center">
+                            <h2>Наши магазины в <a href="#">Москве</a></h2>
+                        </div>
+                        <div class="case-cnt">
+                            <div class="list">
+                                <table>
+                                    <tr>
+                                        <td class="numb">1</td>
+                                        <td class="logo hidden-phone"><img width="65" height="65" src="images/shop1.jpg" alt="" />
+                                        </td>
+                                        <td class="info">
+                                            <p class="ttl">Магазин косметикии аксессуаров</p>
+                                            <p class="addr">Подсосенский пер. 21/5</p>
+                                            <p class="map"><a class="link" href="#">На карте</a>
+                                            </p>
+                                        </td>
+                                        <td class="contact hidden-tablet">
+                                            <p class="tel">Тел: 8 (927) 026 10 27</p>
+                                            <p class="mail"><a class="link" href="#">hello@myhoneybunny.ru</a>
+                                            </p>
+                                        </td>
+                                        <td class="note">
+                                            <div class="status">
+                                                <i class="icon"><img src="img/label-verify.png" alt="" /></i>
+                                                <p class="ttl hidden-phone">Официальный магазин H•B</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="numb">2</td>
+                                        <td class="logo hidden-phone"><img width="65" height="65" src="images/shop2.jpg" alt="" />
+                                        </td>
+                                        <td class="info">
+                                            <p class="ttl">Косметика и салон красоты BB’s</p>
+                                            <p class="addr">Старопименовский пер. 6</p>
+                                            <p class="map"><a class="link" href="#">На карте</a>
+                                            </p>
+                                        </td>
+                                        <td class="contact hidden-tablet">
+                                            <p class="tel">Тел: 8 (495) 699-20-51</p>
+                                            <p class="mail"><a class="link" href="#">hello@bling-blings.ru</a>
+                                            </p>
+                                        </td>
+                                        <td class="note">
+                                            <div class="status">
+                                                <i class="icon"><img src="img/label-verify.png" alt="" /></i>
+                                                <p class="ttl hidden-phone">Официальный магазин H•B</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="numb">3</td>
+                                        <td class="logo hidden-phone"><img width="65" height="65" src="images/shop3.jpg" alt="" />
+                                        </td>
+                                        <td class="info">
+                                            <p class="ttl">Web Cosmetics</p>
+                                            <p class="addr">Проспект Колосова 201</p>
+                                            <p class="map"><a class="link" href="#">На карте</a>
+                                            </p>
+                                        </td>
+                                        <td class="contact hidden-tablet">
+                                            <p class="tel">Тел: 8 (927) 026 10 27</p>
+                                            <p class="mail"><a class="link" href="#">hello@something.ru</a>
+                                            </p>
+                                        </td>
+                                        <td class="note">
+                                            <div class="status">
+                                                <i class="icon"><img src="img/label-verify.png" alt="" /></i>
+                                                <p class="ttl hidden-phone">Официальный магазин H•B</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hidden-tablet">
+                                        <td class="numb">4</td>
+                                        <td class="logo hidden-phone"><img width="65" height="65" src="images/shop4.jpg" alt="" />
+                                        </td>
+                                        <td class="info">
+                                            <p class="ttl">Lunifera</p>
+                                            <p class="addr">ул. Четвертый перекресток 20</p>
+                                            <p class="map"><a class="link" href="#">На карте</a>
+                                            </p>
+                                        </td>
+                                        <td class="contact hidden-tablet">
+                                            <p class="tel">Тел: 8 (927) 026 10 27</p>
+                                            <p class="mail"><a class="link" href="#">hello@lunifera.com</a>
+                                            </p>
+                                        </td>
+                                        <td class="note">
+                                            <div class="status">
+                                                <i class="icon"><img src="img/label-verify.png" alt="" /></i>
+                                                <p class="ttl hidden-phone">Официальный магазин H•B</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="btn-wrap">
+                                <a class="btn btn-more btn-gry-cut" href="#"><span class="hidden-tablet">Показать еще 10 магазинов</span><span class="hidden visible-tablet">Еще 3 магазина</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="case-tile hidden-tablet">
+                    <div class="container">
+                        <ul class="cols">
+                            <li class="column covered"><img src="images/tile_bg1.jpg" alt="" />
+                            </li>
+                            <li class="column covered"><img src="images/tile_bg2.jpg" alt="" />
+                            </li>
+                            <li class="column covered"><img src="images/tile_bg3.jpg" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="case-article hidden-tablet">
+                    <div class="container globalwidth">
+                        <div class="wrapper">
+                            <div class="subtitle">История бренда</div>
+                            <h2>Косметика HoneyBunny производится в России, под Москвой, мы сотрудничаем с частной лабораторией по разработке косметических средств В определенный момент к нам пришло понимание, что просто торговлей заниматься стало не интересно.</h2>
+                        </div>
+                    </div>
+                </section>
+                <section class="case-social hidden visible-tablet">
+                    <div class="container globalwidth">
+                        <div class="follow-mob center">
+                            <a href="#"><i class="icon icon-fb_grn"></i></a>
+                            <a href="#"><i class="icon icon-vk_grn"></i></a>
+                            <a href="#"><i class="icon icon-ig_grn"></i></a>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <footer class="page-footer darkstyle">
+                <div class="container globalwidth">
+                    <div class="contact">
+                        <ul class="items">
+                            <li class="item item1"><a href="#"><i class="icon icon-tel"></i></a>
+                            </li>
+                            <li class="item item2">
+                                <a href="#"><i class="icon icon-mail"></i></a>
+                            </li>
+                            <li class="item item3 hidden-phone">
+                                <a href="#"><i class="icon icon-ig"></i></a>
+                            </li>
+                            <li class="item item4 hidden-phone">
+                                <a href="#"><i class="icon icon-fb"></i></a>
+                            </li>
+                            <li class="item item5 hidden-phone">
+                                <a href="#"><i class="icon icon-vk"></i></a>
+                            </li>
+                            <li class="item item6 hidden-phone">
+                                <a href="#"><i class="icon icon-tw"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="logo-wrap">
+                        <a class="logo" href="index.html"></a>
+                    </div>
+                    <div class="copyright">© 2014 Honey-Bunny</div>
+                </div>
+            </footer>
+        </article>
+    </body>
+
+    </html>
