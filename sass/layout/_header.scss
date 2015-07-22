@@ -212,7 +212,8 @@
         .current {
             a {
                 @include respond-to(large-screen) {
-                    color: #a5eac9!important;
+                    //color: #a5eac9!important;
+                    border-bottom: 1px solid;
                 }
             }
         }
