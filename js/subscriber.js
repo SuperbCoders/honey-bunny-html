@@ -52,7 +52,7 @@ function Subscriber (id) {
 	// Убираем морду после того как человек подписался
 	this.timelineGoodbye =timelineGoodbye;
  	timelineGoodbye
-		.to(subscriber, 0.5, {y:85, ease:Back.easeIn}, '+=2')
+		.to(subscriber, 0.5, {y:85, ease:Back.easeIn, onComplete: killme}, '+=2')
 
 	/*
 	 * Обработчики
