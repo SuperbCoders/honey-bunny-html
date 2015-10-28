@@ -50,6 +50,15 @@
 		.subscriber-buble {
 			display: none;
 		}
+		// Оставим морду подмигивающей (блокируем hover поведение)
+		.kolobok-cnt {
+			.kolobok-laugh {
+				display: none;
+			}
+			.kolobok-wink {
+				display: block;
+			}
+		}
 	}
 	.kolobok-cnt {
 		width: 62px;
@@ -84,18 +93,15 @@
 		}
 	}
 	form {
+		@include retina-sprite(subscriber-buble-white);
 		display: none;
-		width: 372px;
-		height: 264px;
-		background: white;
-		border-radius: 13px;
-		padding: 20px;
+		padding: 20px 30px 20px 21px;
 		color: black;
 		font-size: 16px;
 		line-height: 21px;
 		position: absolute;
 		bottom: 0;
-		right: 65px;
+		right: 65px; 
 
 		.close {
 			@include retina-sprite(subscriber-close);
@@ -103,9 +109,10 @@
 			right: -28px;
 			top: 14px;
 			cursor: pointer;
+			opacity: 0.6;
 			
 			&:hover {
-				opacity: 0.6;
+				opacity: 1;
 			}
 		}
 		p {

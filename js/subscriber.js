@@ -10,12 +10,12 @@ function Subscriber (id) {
 		kolobokWink = kolobokCnt.find('.kolobok-wink'),
 		btnClose = $('#subscriber-close'),
 		timelineShowMe = new TimelineLite({paused: true}),
+		timelineGoodbye = new TimelineLite({paused: true}),
 		jumpTween = new TimelineMax({
 			paused: true,
 			repeat: 1
 		}),
 		jumpInterval;
-		window.jumpTween = jumpTween,
 		emailConfirmEl = $('#subscriber-email-confirm');
 
 	/*
@@ -24,10 +24,18 @@ function Subscriber (id) {
 
 	// Первое появление (после загрузки страницы)
 	timelineShowMe
+		// колобок
 		.fromTo(subscriber, 0.5, {y:85}, {y:0, ease:Back.easeOut})
-		.fromTo(buble, 0.5, {rotationY:90}, {
-			rotationY:0, 
-			transformOrigin:'right', 
+		// зелёный бабл
+		// .fromTo(buble, 0.5, {rotationY:90}, {
+		// 	rotationY:0, 
+		// 	transformOrigin:'right', 
+		// 	onComplete: function() { timelineShowMe.kill() }
+		// })
+		.fromTo(buble, 0.5, {rotation: -90, opacity: 0}, {
+			rotation: 0, opacity: 1,
+			transformOrigin:'right bottom', 
+			ease: Back.easeOut,
 			onComplete: function() { timelineShowMe.kill() }
 		})
 
@@ -41,12 +49,17 @@ function Subscriber (id) {
 			}
 		}});
 
+	// Убираем морду после того как человек подписался
+	this.timelineGoodbye =timelineGoodbye;
+ 	timelineGoodbye
+		.to(subscriber, 0.5, {y:85, ease:Back.easeIn}, '+=2')
+
 	/*
 	 * Обработчики
 	 */
 
 	// Через 2.5 секунды после создания показываемся
-	setTimeout(function() {
+	showmeTimer = setTimeout(function() {
 		timelineShowMe.play(0)
 	}, 2500);
 
@@ -73,16 +86,33 @@ function Subscriber (id) {
 
 	// Кнопка закрытия
 	btnClose.click(function() {
-		subscriber.removeClass('clicked').addClass('closed')
+		//subscriber.removeClass('clicked').addClass('closed')
+		killme()
 	});
 
 	// Показываем финальный экранчик (подтверждение подписки)
 	function showFinal () {
 		subscriber.removeClass('clicked').addClass('subscribed')
 		var timer = setTimeout(function () {
-			subscriber.removeClass('subscribed').addClass('closed')
+			subscriber.removeClass('subscribed').addClass('closed');
+			goodbye();
 			clearInterval(timer);
 		}, 5000);
+	}
+
+	// Убираем все безвозвратно
+	function killme () {
+		if (timelineShowMe) timelineShowMe.kill();
+		if (timelineGoodbye) timelineGoodbye.kill();
+		if (jumpTween) jumpTween.kill();
+		if (showmeTimer) clearTimeout(showmeTimer);
+		if (jumpInterval) clearInterval(jumpInterval);
+		subscriber.remove();
+	}
+
+	// Завершение цикла
+	function goodbye () {
+		timelineGoodbye.play()
 	}
 
 	subscriber.find('.subscribe-button').click(showFinal);
