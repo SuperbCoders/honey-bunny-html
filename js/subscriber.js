@@ -28,13 +28,13 @@ function Subscriber (id) {
 		.fromTo(subscriber, 0.5, {y:85}, {y:0, ease:Back.easeOut})
 		// зелёный бабл
 		// .fromTo(buble, 0.5, {rotationY:90}, {
-		// 	rotationY:0, 
-		// 	transformOrigin:'right', 
+		// 	rotationY:0,
+		// 	transformOrigin:'right',
 		// 	onComplete: function() { timelineShowMe.kill() }
 		// })
 		.fromTo(buble, 0.5, {rotation: -90, opacity: 0}, {
 			rotation: 0, opacity: 1,
-			transformOrigin:'right bottom', 
+			transformOrigin:'right bottom',
 			ease: Back.easeOut,
 			onComplete: function() { timelineShowMe.kill() }
 		})
@@ -52,7 +52,9 @@ function Subscriber (id) {
 	// Убираем морду после того как человек подписался
 	this.timelineGoodbye =timelineGoodbye;
  	timelineGoodbye
-		.to(subscriber, 0.5, {y:85, ease:Back.easeIn, onComplete: killme}, '+=2')
+		.to(subscriber, 0.5, {
+			y:85, ease:Back.easeIn, onComplete: killme
+		}, '+=2')
 
 	/*
 	 * Обработчики
@@ -74,7 +76,7 @@ function Subscriber (id) {
 		subscriber.addClass('clicked');
 		// Пригодится после закрытия окошка
 		subscriber.removeClass('closed');
-		// Если анимация в движении, пусть тогда остановится уже после проигрывания
+		// Если анимация в движении, пусть остановится уже после проигрывания
 		// в onComplete()
 		if (jumpTween.progress() === 1) jumpTween.kill();
 	}
