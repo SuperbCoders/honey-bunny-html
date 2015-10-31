@@ -735,9 +735,10 @@
             <div class="container globalwidth">
                 <div class="contact">
                     <ul class="items">
-                        <li class="item item1"><a href="#"><i class="icon icon-tel"></i></a>
+                        <li class="item item1 hidden-phone">
+                            <a href="#"><i class="icon icon-tel"></i></a>
                         </li>
-                        <li class="item item2">
+                        <li class="item item2 hidden-phone">
                             <a href="#"><i class="icon icon-mail"></i></a>
                         </li>
                         <li class="item item3 hidden-phone">
@@ -749,13 +750,32 @@
                         <li class="item item5 hidden-phone">
                             <a href="#"><i class="icon icon-vk"></i></a>
                         </li>
-                        <li class="item item6 hidden-phone">
+                        <!-- <li class="item item6 hidden-phone">
                             <a href="#"><i class="icon icon-tw"></i></a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="logo-wrap">
                     <a class="logo" href="index.html"></a>
+                </div>
+                <div class="mailer hidden-phone">
+                    <form class="subscribe-form">
+                        <div class="title">РАССЫЛКА</div>
+                        <div class="input-wrap">
+                            <input type="text" class="email" placeholder="Ваш email">
+                            <input
+                                type="button"
+                                class="button"
+                                id="subscribe_btn"
+                                value="Подписаться"
+                                onclick="$('form.subscribe-form').hide();$('#mailer-thanks').show()">
+                        </div>
+                        <div class="msg">Пишем только по делу!</div>
+                    </form>
+                    <div class="after-send" id="mailer-thanks">
+                        <div class="strange-pic"></div>
+                        <div class="thanks">Спасибо, ожидайте новостей!</div>
+                    </div>
                 </div>
                 <div class="copyright">© 2014 Honey-Bunny</div>
             </div>
@@ -846,7 +866,7 @@
     </div>
 
     <!-- Всплывающее окошко с колобком и формой ввода почты для подписки на рассылку -->
-    <div class="subscriber" id="subscriber">
+    <div class="subscriber hidden-phone" id="subscriber">
         <div class="kolobok-cnt">
             <div class="kolobok kolobok-smile"></div>
             <div class="kolobok kolobok-wink"></div>
