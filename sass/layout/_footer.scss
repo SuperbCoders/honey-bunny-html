@@ -153,6 +153,8 @@
 			.strange-pic {
 				@include retina-sprite(subscriber-final-bottom);
 				display: inline-block;
+				-webkit-transform: scale(0.5);
+				-ms-transform: scale(0.5);
 				transform: scale(0.5);
 			}
 		}
