@@ -8,6 +8,7 @@
 		background: rgba(255,255,255,0.7); 
 		display: none;
 		opacity: 0; 
+		z-index: 100;
 	}
 	.wrapper {
 		color: black;
@@ -18,8 +19,8 @@
 		right: -340px;
 		height: 100%;
 		background: white;
-		z-index: 100;
 		box-sizing: border-box;
+		z-index: 101;
 	}
     
     * {
@@ -138,9 +139,8 @@
 			padding: 20px;
 			button {
 				width: 100%;
-				height: 50px;
-				line-height: 49px;
-				text-align: center;
+				padding: 13px 5px;
+				display: inline-block;
 				background: #51C879;
 				cursor: pointer;
 				font-size: 18px;
@@ -148,7 +148,6 @@
 				font-weight: bold;
 				border: none;
 				outline: none;
-				-webkit-border-radius: 30px;
 				border-radius: 30px;
 				&:hover {
 					background: #24B956;
