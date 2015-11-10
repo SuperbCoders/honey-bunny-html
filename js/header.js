@@ -47,8 +47,14 @@ window.jQuery(function ($) {
         menu.addClass('collapsed');
     }
 
-    // Нажатие на кнопку "Купить" сворачивает меню
-    $('.btn.btn-orn').click(foldLetters);
+    // Нажатие на кнопку "Купить" сворачивает меню 
+    // и открывает корзинку справа на определенное время
+    $('.btn.btn-orn').click(function() {
+        foldLetters();
+        if (sidebarCart) {
+            sidebarCart.show(0.4,3);
+        }
+    });
     // Клик по точкам в меню восстанавливает свернутое меню
     menu.find('.item.dots').click(unfoldLetters);
 
