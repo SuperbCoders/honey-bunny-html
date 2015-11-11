@@ -30,11 +30,11 @@ function SidebarCart(selector) {
 		Появление корзины и скрытие через определенное время.
 		Остальная страница не блокируется
 		@param {number} [speed=0.4] - скорость анимации в секундах
-		@param {integer} [pause=3] - время через которое корзина скроется
+		@param {integer} [pause=4] - время через которое корзина скроется
 	 */
     function show(speed, pause) {
         speed = speed ? speed : 0.4;
-        pause = pause ? pause : 3;
+        pause = pause ? pause : 4;
         TweenMax.to(cart, speed, {
             right: 0
         });
@@ -48,11 +48,11 @@ function SidebarCart(selector) {
 		Открытие корзины.
 		Остальная страница при этом блокируется
 		@param {number} [speed=0.4] - скорость анимации в секундах
-		@param {integer} [pause=3] - время через которое корзина скроется
+		@param {integer} [pause=4] - время через которое корзина скроется
 	 */
     function open(speed, pause) {
     	speed = speed ? speed : 0.4;
-        pause = pause ? pause : 3;
+        pause = pause ? pause : 4;
         TweenMax.to(overlay, speed, {
             display: 'block',
             opacity: 1
@@ -66,9 +66,8 @@ function SidebarCart(selector) {
     /**
 	   Закрытие корзины
 	 */
-    function close(speed, pause) {
+    function close(speed) {
     	speed = speed ? speed : 0.4;
-        pause = pause ? pause : 3;
     	if (overlayActive) {
     		TweenMax.to(overlay, speed, {
 	    	    display: 'none',
