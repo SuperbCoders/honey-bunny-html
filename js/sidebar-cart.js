@@ -5,26 +5,25 @@
    @param {string} selector - селектор DOM-элемента для корзины (например "#cart")
  */
 function SidebarCart(selector) {
-    // Public
-    this.show = show;
-    this.open = open;
-    this.close = close;
-    this.init = init;
+    var self = this;
+    self.pause = 4;
+    self.speed = 0.4;
 
     // Private
-    var cart = document.querySelector('#sidebar-cart .wrapper'),
-    	overlay = document.querySelector('#sidebar-cart .overlay'),
+    var cart = document.querySelector(selector + ' .wrapper'),
+    	overlay = document.querySelector(selector + ' .overlay'),
     	overlayActive = false,
-    	content = document.querySelector('#sidebar-cart .content'),
-    	closeBtn = document.querySelector('#sidebar-cart .header .close');
+    	content = document.querySelector(selector + ' .content'),
+    	closeBtn = document.querySelector(selector + ' .header .close'),
+        leaveOpened = false;
 
     /**
 		Инициализация коризны
 	 */
-    function init() {
+    this.init = function() {
         // Инициализируем perfect scrollbar
         Ps.initialize(content);
-    }
+    };
 
     /**
 		Появление корзины и скрытие через определенное время.
@@ -32,17 +31,19 @@ function SidebarCart(selector) {
 		@param {number} [speed=0.4] - скорость анимации в секундах
 		@param {integer} [pause=4] - время через которое корзина скроется
 	 */
-    function show(speed, pause) {
-        speed = speed ? speed : 0.4;
-        pause = pause ? pause : 4;
-        TweenMax.to(cart, speed, {
-            right: 0
+    this.show = function() {
+        TweenMax.to(cart, self.speed, {
+            right: 0,
+            onComplete: function() {
+                setTimeout(function() {
+                    if (!leaveOpened) {
+                        self.close(self.speed);
+                    }
+                }, self.pause * 1000);
+            }
         });
-        TweenMax.to(cart, speed, {
-            right: -340,
-            delay: pause
-        });
-    }
+        
+    };
 
     /**
 		Открытие корзины.
@@ -50,39 +51,49 @@ function SidebarCart(selector) {
 		@param {number} [speed=0.4] - скорость анимации в секундах
 		@param {integer} [pause=4] - время через которое корзина скроется
 	 */
-    function open(speed, pause) {
-    	speed = speed ? speed : 0.4;
-        pause = pause ? pause : 4;
-        TweenMax.to(overlay, speed, {
+    this.open = function() {
+        TweenMax.to(overlay, self.speed, {
             display: 'block',
             opacity: 1
         });
-        TweenMax.to(cart, speed, {
+        TweenMax.to(cart, self.speed, {
             right: 0
         });
         overlayActive = true;
-    }
+    };
 
     /**
 	   Закрытие корзины
 	 */
-    function close(speed) {
-    	speed = speed ? speed : 0.4;
+    this.close = function() {
     	if (overlayActive) {
-    		TweenMax.to(overlay, speed, {
+    		TweenMax.to(overlay, self.speed, {
 	    	    display: 'none',
 	    	    opacity: 0
 	    	});
 	    	overlayActive = false;
     	}
-    	TweenMax.to(cart, speed, {
+    	TweenMax.to(cart, self.speed, {
     	    right: -340
     	});
-    }
+    };
 
     // Обработчик клика по кнопке закрытия корзины
     closeBtn.addEventListener('click', function() {
-    	close();
+    	self.close();
+    });
+    // Наводим курсор и удерживаем коризну открытой
+    cart.addEventListener('mouseenter', function() {
+        leaveOpened = true;
+    });
+    // Убираем курсор и закрываем корзину через 4 сек
+    cart.addEventListener('mouseleave', function() {
+        leaveOpened = false;
+        setTimeout(function() {
+            if (!leaveOpened) {
+                self.close(self.speed);
+            }
+        }, self.pause * 1000);
     });
 
 }
